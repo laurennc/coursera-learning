@@ -3,8 +3,18 @@
 <head>
 <meta charset="utf-8">
 <title>Anatomy of a CSS Rule</title>
+
+	<!-- p and h1 are element selectors. The CSS applies to each elemenet of this type. So for an example, a div tag would not get either formating -->
+	<!-- .blue is a class selector. You can apply the class to may kinds of elements in their opening tag-->
+	<!-- #name is an id selector, a value of some id-->
+	<!-- you can also combine selectors that you want to have the same properties. 
+		div, .blue {
+			color: blue;
+		} -->
+	<!-- id selector is most restrictive, least reusable because ids for elements have to be unique. You can only use it once in the document. Try to use these sparingly. The idea is to resuse as much of the styling as possible. Not define it for each element.-->
+	<
 <style>
-p {
+p { 
 	color: blue;
 	font-size: 20px;
 	width: 200px;
@@ -15,12 +25,51 @@ h1 {
 	font-size: 36px;
 	text-align: center;
 }
+.blue {
+	color: blue;
+}
+
+#name {
+	color: blue;
+}
+/* all h2 elements*/
+h2 {
+	color: red;
+	text-align: center;
+}
+
+/* all with class="highlight"*/
+.highlight {
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+	background-color: green;
+	opacity: .6;
+}
+
+/* element with id="mainPoint"*/
+#mainPoint {
+	font-size: 24px;
+	font-weight: bold;
+	background-color: red;
+	opacity: 0.7;
+}
+
+/* all p AND h1 elements*/
+p, h1 {
+	color:	blue;
+	text-align: center;
+}
+
+
 </style>
 <body>
 	<h1>Anatomy of a CSS Rule</h1>
-	<h2>Subdeaing 1</h2>
+	<h2>Subheading 1</h2>
 	<p>CSS words by associating rules with HTML elements. These rules govern how the content of specified elements should b displayed. A CSS rule contain two parts: a selector and a declaration.</p>
 	<h2>Subheading 2</h2>
 	<p>MORE WORDS HERE</p>
+	<div class="highlight">This is how you format elements with a class selector in CSS </div>
+	<div><span id="mainPoint">Annndd here's using an id selector. </span>These all seem redudant for now. </div>
 </body>
 </html>
