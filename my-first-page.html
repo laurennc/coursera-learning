@@ -1,0 +1,146 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My First Page</title>
+</head>
+<body>
+
+	<section>
+		<h1 id="top">Topics</h1>
+			<ul>
+			<!--Link to every setion in the page -->
+			<!-- These are called "fragment identifiers" -->
+			<!-- They allow you to update to a specific URL -->
+			<li><a href="#section1">Div and Span</a></li>
+			<li><a href="#section2">Headings</a></li>
+			<li><a href="#section3">Creating Links</a></li>
+			<li><a href="#section4">Special Characters</a></li>
+			<li><a href="#section5">Creating Lists</a></li>
+			<li><a href="#section6">Displaying Images</a></li>
+		</ul>
+	</section>
+
+	<section id="section1">
+		<h2>Using Div and Span </h2>
+	<div>*** DIV 1: Some cntent here ***</div>
+	<div>*** DIV 2: Following right after div 1 ***</div>
+	<span>*** SPAN 1: Following right after div 2 ***</span>
+	<div>
+		*** DIV 3: Following right after span 1
+		<span>*** SPAN 2: INSIDE div 3 ***</span>
+		Continue content of div 3 ***
+	</div>
+	</section>
+	
+	<br>
+	<section id="section2">
+	<!--- You use h and not div as a way to add semantic value. This is a heading and not just another --->
+	<h1>This is the Main Heading; important for SEO</h1>
+	<h2>Subheading 2</h2>
+	<h3>Subheading 3</h3>
+	<h4>Subheading 4</h4>
+	<h5>Subheading 5</h5>
+	<h6>Subheading 6</h6>
+	<p> header, nav, section, article, aside, footer -- additional semantic html tags that may be useful. These are ALL BLOCK LEVEL elements and NOT in line elements </p>
+	</section>
+	<br>
+
+	<section id="section3">
+	<div>
+		<h2>Creating Links</h2>
+		We can link to a file in the same directory as this HTML file like this:
+		<a href='index.html' title='same dir link'>Linking to a file in the same directory in-line</a>
+
+		<a href='index.html' title='same dir link'><div>Adding a div tag forces the link to a new line</div></a>
+
+		<div>The a tag is both a flow content and a phrasing content. It's both an in-line element and a block level element at the same time. </div> 
+
+		<div><a href='http:/www.google.com' target='_blank' title='Google'>Google Homepage</a>
+		Here the a tag has the target attribute set to target=_blank forces the browser to open this in a new tab. No commas between attributes!
+		</div>
+
+
+	</div>
+	</section>
+
+	<br>
+
+	<section id="section4">
+	<div>
+		<h2>How to differentiate special characters </h2>
+		as text and not html These three characters are &lt;, &gt;, &amp; There are many of these types of these "character entity references" in html. 
+
+		Another reference is to keep a certain phrase to wrap all together always. Keep&nbsp;these&nbsp;together.
+
+		Another another reference is for quotations &quot;
+	</div>
+	</section>
+
+	<br>
+
+	<section id="section5">
+	<div>	
+		My Typical Shopping List:
+		<ul> <!--- Only <li> elements are allowed in a ul list! --->
+		<li>Milk</li>
+		<li>Eggs</li>
+		<li>Broccoli</li>
+		<li>Chicken thighs</li>
+		<li>Popcorn</li>
+		<li>Frozen Pizza</li>
+		<li>Wine
+			<ul>
+				<li>Red</li>
+				<li>Rosé</li>
+			</ul>
+		</li>
+		</ul>	
+	</div>
+
+	<br>
+	<div>
+
+		Bedtime Routine
+		<ol>
+			<li>Set alarms</li>
+			<li>Put on lofi</li>
+			<li>Clean all dishes</li>
+			<li>Make tea</li>
+			<li>Wash </li>
+				<ul>
+					<li>Face</li>
+					<li>Teeth</li>
+				</ul>
+			<li>Read 30 mins</li>
+			<li>Put on pajamas</li>
+			<li>SLEEP!</li>
+		</ol>
+	</div>
+</section>
+
+<section>
+	<div>
+		<a href="#top">Back to the top</a>
+	</div>
+</section>
+
+<section id="section6">
+	<div>
+		<p>
+			<div>
+			<img src="celeste-farewell.png" width="400" height="235" alt="Celeste Farewell">
+		    </div>
+			The img tag works as an in-line element. 
+		</p>
+		<p>
+			<img src="https://www.rd.com/wp-content/uploads/2020/04/GettyImages-1093840488-5-scaled.jpg?resize=768,512" width="768" height="512">
+			Using width and height tells the browser how much space to save for the image and how to partition things on the screen. That way the screen/text/other elements don't jump around as the page loads the new elements. Also, if the URL is broken, it won't destroy the whole layout of your page, particularly if the layout relied on the size of the image. 
+		</p>
+	</div>
+</section>
+
+
+</body>
+</html>
