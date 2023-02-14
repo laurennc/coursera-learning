@@ -1,0 +1,45 @@
+Notes on Conflict Resolution
+
+Conflicts are resolved using the "cascading" algorithm, hence the name CSS. 
+
+Four key concepts to understanding the decisions the algorithm will make:
+
+1. Origin
+2. Merge
+3. Inheritance
+4. Specificity
+
+ORIGIN and MERGE
+
+When two commands are in conflict, the LAST DECLARATION WINS. HTML is processed top to bottom, so that's the lowest command on the page. For precendece, external CSS is declared at the spot where it's linked/imported. 
+
+When different rules/sheets declare rules for elements that are NOT in conflict, DECLARATIONS MERGE. So if you set the header to a color in one place and to a size in another place, the final page will just have the combined color + size of the two rules. 
+
+INHERITANCE
+
+DOM = Document Object Model, thought of as a tree
+
+Speficing something or a parent element automatically cascades down to all of its children. So the top element, body, can be used to say set a single font for the entire document, or color etc. 
+
+SPECIFICITY
+
+MOST SPECIFIC SELECTOR COMBINATION WINS
+
+But how do you know which is the most specific? You can calculate a "score."
+
+From left to right you can form a number with the digits being:
+	style="..." --> 
+	ID
+	Class, pseudo-class
+	# of Elements
+
+So the rule, <h2 style='color: green;'> gets a score of 1 0 0 0. 
+
+The rule div p {color: green} gets a 0 0 0 2.
+
+div #myParag {color: blue;} gets a 0 1 0 1
+
+div.big p {color: green'} gets a 0 0 1 2
+
+In some cases, if you really want a rule to take precedence, even if it loses on the specificity score you add !important before the CSS rule semi-colon. But this is really not a good best practice to follow. Avoid it unless absolutely necessary. 
+
