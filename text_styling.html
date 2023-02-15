@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+
+<title> Guidelines for Styling Text </title>
+
+<style type="text/css">
+	.style {
+		font-family: Arial, Helvetica, sans-serif; /* You provide a list here just in case the computer doesn't have your font installed */
+		color: #0000ff; /*RRGGBB*/
+		font-style: italic;
+		font-weight: bold; /* numbers work too with a min of 100 and a max of 900 */
+		font-size: 24px; /* default is typically 16px px != pt like in Word */
+		text-transform: uppercase; /*control things like capitalize */
+		text-align: right;
+	}
+	body {
+		font-size: 120%; /* take browser default size and increase it by 120% For 16 px default is a bit over 19 px. Using these percentages is common in this header but ems are more used in the body. */
+		/* em is a unit of measure that is as wide as the letter m in the font that is being used. so the font size scales depending on the font used. */
+		/* for these relative font sizes, they don't override each other; they merge together! */
+		/* Using relative sizes is useful because it's essentially doing the same thing as someone zooming in on the doc. So you can preserve the relative sizing between things, even when people zoom in */
+	}
+</style>
+</head>
+
+
+<body>
+	<p>You can get commonly used font combinations from <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">http://www.w3schools.com/cssref/css_websafe_fonts.asp</a>. Lorem ipsum and some more words here just to close out this paragraph. </p>
+	<p class="style">Lorem ipsum and all the other words to demonstrate a second paragraph but with a style invoked this time. </p>
+
+	<div>Regular Text to Explore Relative Font Sizing </div>
+	<div style="font-size: 2em;">2em text <!-- here the font size is first 120% of the default and then 2em of that so mm*1.2 -->
+		<div style="font-size: 2em;">4em text <!-- becaues the font sizes are multiplicative! Here to get to four, you've started with two and need to multiply by 2 more to get to 4 -->
+			<div style="font-size: 0.5em;">2em again!</div>
+		</div>
+	</div>
+</body>
+</html>
