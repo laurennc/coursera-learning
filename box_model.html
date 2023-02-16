@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+
+<title> Box Model </title>
+
+<style type="text/css">
+	
+	* { /* * says select EVERY element and apply this property and value */
+		box-sizing: border-box; /* guarantees that this is the border+padding+content. This is the modern choice to use so really stick with this! This is a property that is NOT inherited by default. */
+		margin: 0; /* this selector is also a good way to over-write the pre-defined browser styles */
+		padding: 0;
+	} 
+
+	body{
+		background-color: gray;
+		margin: 0; /* overwrites the default margin and padding that Chrome styles*/
+		}
+
+	#box {
+		background-color: blue;
+		padding: 10px 10px 10px 10px; /*top right bottom left, since they're all the same you can use one number here */
+		border: 5px solid black;
+		width: 300px; /* this width only sets the width of the CONTENT. The true width adds the padding and border as well */
+		margin-top: 50px;
+		height: 50px; /* If you're box is too short, the content part of the box will just spill over. And any element you place below will just go below the height of the box because of the command in the * element.  */
+		overflow: auto; /* by default the overflow is visible. but you can clip with hidden or auto adds scroll bars, scroll keeps visible scroll bars no matter what. NOTE users hate having scroll bars inside page elements with a few common exceptions */
+	}
+
+	#content {
+		background-color: #90EE90; //green
+	}
+	h1 {
+		margin-bottom: 30px; /* Margins that are left and right are cummulative For top + bottom, the margins collapse to the larger of the two margins. So if one box has bottom of 20px and the box beneath it has a top margin of 30px, the space between the two boxes will just be 30. */
+	}
+	
+</style>
+</head>
+
+
+<body>
+<!-- in HTML, every element is considered a box. Each box has four components - the content, padding, border, and margin. -->
+
+	<h1>Box Model</h1>
+	<div id="box">
+		<div id="content">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+		</div>
+	</div>
+
+</body>
+</html>
