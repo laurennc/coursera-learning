@@ -2,14 +2,25 @@
 <head>
 <meta charset="utf-8">
 
-<title> TITLE HERE </title>
+<title> Background Properties </title>
 
 <style type="text/css">
-
+	#bg {
+		width: 500px;
+		height: 500px;
+		background-color: blue;
+		background-image: url("celeste-farewell.png"); /* This path is relative to the file that contains this CSS! So if you CSS sheet is in a different folder, that's home for that file! */
+		background-repeat: no-repeat;
+		background-position: bottom right; /* vertical position and then horizontal position */
+		background: url("celeste-farewell.png") no-repeat top left; /*putting this command at the end over writes all the background commands that came before it! */
+	}
 </style>
 </head>
 
 <body>
+	<h1>The Background Property</h1>
+
+	<div id="bg">Background properties are fun!</div>
 
 </body>
 </html>
