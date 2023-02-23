@@ -4,13 +4,90 @@
 
 <title> Positioning Elements by Floating</title>
 
-<style type="text/css">
+<!-- Most websites today are built with floating UI elements
+	
+-->
+<style>
+	div {
+		background-color: #00FFFF;
+	}
+	p.float {
+		width: 50px;
+		height: 50px;
+		border: 1px solid black;
+		/* let's float them all to the left */
+		float: left;
+		margin: 10px;
+	}
+
+	#p1 {
+		background-color: #A52A2A;
+		/* float: right; */
+		/* Floating elements take them out of the original document flow. So when we float this one right, the rest of the paragraphs move up.*/
+		/* Margins NEVER collapse with floated elements! So the boxes in the normal flow go to the very top of the div but the floated element does NOT */
+	}
+	#p2 {
+		background-color: #DEB887;
+	}
+	#p3{
+		background-color: #5F9EA0;
+		clear: left; /* you can also put these sort of clear restrictions on floating elements */
+	}
+	#p4 {
+		background-color: #FF7F50;
+	}
+	section {
+		clear:	left; /* This tells browser that nothing should be allowed to float to the left of it, making the div tag larger */
+	}
+
+	p {
+		width: 50px;
+		height: 50px;
+		border: 1px solid black;
+	}
+	#p5 {
+		background-color: #A52A2A;
+		float: left;
+		height: 150px;
+	}
+	#p6 {
+		background-color: #DEB887;
+		float: right;
+		height: 100px;
+	}
+	#p7{
+		background-color: #5F9EA0;
+		clear: both; /* Nothing should float to left or right! Useful if your different elements have different heights. They definitely won't overlap with anything next to them this way. */
+	}
+	#p8 {
+		background-color: #FF7F50;
+	}
 
 </style>
 </head>
 
 <body>
+	<h1>Floating Elements</h1>
+	<div>
+		<p class="float" id="p1"></p>
+		<p class="float" id="p2"></p>
+		<p class="float" id="p3"></p>
+		<p class="float" id="p4"></p>
+		<section>
+			This is regular content continuing after the paragraph boxes
+		</section>
+	</div>
 
+		<h1>Floating Elements 2</h1>
+	<div>
+		<p id="p5"></p>
+		<p id="p6"></p>
+		<p id="p7"></p>
+		<p id="p8"></p>
+		<section>
+			This is regular content continuing after the paragraph boxes
+		</section>
+	</div>
 </body>
 </html>
 

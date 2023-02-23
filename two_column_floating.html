@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+
+<title> Two Column Floating</title>
+
+<style>
+	* {
+		box-sizing: border-box; /* include border in the 50% width */
+	}
+	div {
+		background-color: #00FFFF;
+	}
+	p {
+		width: 50%;
+		border: 1px solid black; /* This 1 px means the floating elements can't go side by side just using 50%! They don't fit if they both need to be half the screen + 1 pixel! When floating elements can't fit on the same line, they move to the next line */
+		float: left;
+		padding: 10px;
+		/* margin: 10px; this is not included in a border-box so that's good to know! */
+	}
+	#p1 {
+		background-color: #A52A2A;
+	}
+	#p2 {
+		background-color: #DEB887;
+	}
+	section {
+		clear: left;
+	}
+</style>
+</head>
+
+<body>
+	<h1>Two Column Design</h1>
+
+	<div>
+		<p id="p1">Descended from astronomers stirred by starlight consciousness at the edge of forever tendrils of gossamer clouds Rig Veda. Are creatures of the cosmos muse about circumnavigated the sky calls to us citizens of distant epochs intelligent beings. Paroxysm of global death Apollonius of Perga venture star stuff harvesting star light a very small stage in a vast cosmic arena paroxysm of global death? Extraordinary claims require extraordinary evidence bits of moving fluff the carbon in our apple pies bits of moving fluff a still more glorious dawn awaits the sky calls to us and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+		<p id="p2">Galaxies bits of moving fluff Rig Veda realm of the galaxies dispassionate extraterrestrial observer rich in mystery. Emerged into consciousness cosmic fugue gathered by gravity cosmic ocean another world extraordinary claims require extraordinary evidence? Vanquish the impossible Sea of Tranquility take root and flourish a mote of dust suspended in a sunbeam something incredible is waiting to be known another world. Network of wormholes network of wormholes the only home we've ever known something incredible is waiting to be known how far away stirred by starlight.</p>
+		<section>This is regular content continuing after the paragraph boxes.</section>
+	</div>
+</body>
+</html>
+
