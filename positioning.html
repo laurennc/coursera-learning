@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+
+<title> Relative and Absolute Element Positioning </title>
+
+<style type="text/css">
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	margin-bottom: 15px;
+}
+
+div#container {
+	background-color: #00FFFF;
+	position: relative;
+	top: 60px;
+}
+
+p{
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	margin-bottom: 15px;
+}
+
+#p1 {
+	background-color: #A52A2A;
+	position: relative;
+	top: 65px;
+	left: 65px;
+}
+#p2 {
+	background-color: #DEB887;
+}
+#p3 {
+	background-color: #5F9EA0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#p4 {
+	background-color: #FF7F50;
+}
+</style>
+<!-- 
+Static Positioning is default for all except html and will ignore positioning offests.
+
+Relative positioning - element is positioned relative to its position in the normal document flow. These include top, bottom, left, right (like LaTeX)
+		-- element is NOT taken out of normal document flow
+		-- these can be arranged with both positive and negative offests
+
+Absolute positioning  - all offests are relative to the position of the nearest ancestor which has positioning set on it, other than static
+		-- By default, <html> positioning is RELATIVE not STATIC
+		-- Element is taken out of normal document fow
+
+Offsettin the relative container element offsets its contents as well. So you can just move that whole container instead of needing to reposition every single element inside of it. 
+
+
+-->
+</head>
+<body>
+<h1>Positioning Elements</h1>
+
+<div id="container">
+	<p id="p1"></p>
+	<p id="p2"></p>
+	<p id="p3"></p>
+	<p id="p4"></p>
+</div>
+
+</body>
+</html>
+
