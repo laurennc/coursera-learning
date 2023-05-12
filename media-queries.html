@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+
+<title> Media Queries </title>
+
+<style type="text/css">
+h1 {
+	margin-bottom: 15px;
+}
+
+p {
+	border: 1px solid black;
+	margin-bottom: 15px;
+}
+
+#p1 {
+	background-color: #A52A2A;
+	width: 300px;
+	height: 300px;
+}
+
+#p2 {
+	background-color: #DEB887;
+	width: 50px;
+	height: 50px;
+}
+
+/**** Large devices only ****/
+/**** anything that is AT LEAST 1200 px wide ****/
+@media (min-width: 1200px) {
+	#p1 {
+		width: 80%;
+	}
+	#p2 {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+
+/**** Medium devices only ****?
+/**** anything that is 992 < pixels <1199 ****/
+/*** these widths are from Twitter Bootstrap definitions ****/
+@media (min-width: 992px) and (max-width: 1199px) {
+		#p1 {
+		width: 50%;
+	}
+	#p2 {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+</style>
+</head>
+
+<!-- 
+You can set different CSS layouts for different devices.
+
+You define media features that all have their own styles. Each feature has to resolve to true or false. If true, style within braces apply. Most common ones do with max-width and min-width. You can also do portrait or landscape orientations. Use "and" to set range and not < > Comma is equivalent to OR. 
+
+This is the basis of "responsive design"
+
+Base styles apply across the board and are listed first. Then you start targeting different screen sizes. 
+
+DO NOT OVERLAP RANGE BOUNDARIES. It looks like they are inclusive of the number you write. 
+-->
+
+<body>
+
+<h1>Media Queries</h1>
+
+<p id="p1"></p>
+<p id="p2"></p>
+
+</body>
+</html>
+
