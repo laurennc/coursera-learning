@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title> Bootstrap Starter Page </title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css"> <!-- we come afterwards so we can overwrite bootstrap styles -->
+
+<style type="text/css">
+	.row {
+		margin-bottom: 15px;
+	}
+
+	.row > div {
+		border: 2px solid red;
+		background-color: gray;
+	}
+</style>
+</head>
+
+<!-- 
+Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web. 
+
+A core design principle fo rwebpages is that text should be aligned. For some reason, you must use a container class that has a fixed padding. And then you must use a row but then you need to undo the column padding. Essentially, you're moving the padding of the first column to the edge of the broswer so the start of the column itself begins with the container. 
+
+I guess they did this so that the column can be generic but it adds this weird complexity with rows. 
+
+Columns are named/defined using the same template. col-SIZE-SPAN
+	-SIZE = screen width range identifier like MD or LG (LG > 1200px). Columns will collapse or stack below that width unless there is another rule that applies. 
+	-SPAN = How many columns an element should span, with values of 1 through 12. anything more than 12, it will just wrap to the next line but not formally be a new row
+
+-->
+
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 col-sm-6"> Col 1</div> <!-- 992px <= MD < 1200 px -->
+		<div class="col-md-4 col-sm-6"> Col 2</div>
+		<div class="col-md-4 col-sm-6"> Col 3</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4 col-sm-6"> Col 1</div> <!-- 992px <= MD < 1200 px -->
+		<div class="col-md-4 col-sm-6"> Col 2</div>
+		<div class="col-md-4 col-sm-6"> Col 3</div>
+	</div>
+
+	<div class="row">
+		<div class="col-6"> Col 1</div> <!-- using no size means xs in old terminology and now just means none so it means there are no changes as the window resizes -->
+		<div class="col-6"> Col 2</div>
+		<div class="col-6"> Col 3</div>
+	</div>
+</div>
+
+
+<!-- jQuery FIRST (Bootstrap JS plugins depend on it) -->
+	<script src="js/jquery-3.7.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+
+
+</body>
+</html>
+
