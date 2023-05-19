@@ -1,1 +1,78 @@
-adding file here
+* {
+	box-sizing: border-box;
+	font-family: Arial;
+}
+h1 {
+	margin-bottom: 15px;
+}
+p {
+	/*border: 1px solid black;*/
+	/*background-color: #A52A2A;*/
+	background-color: #bebebe;
+
+	/* setting these three things centers the object */
+
+	margin-right: auto;
+	margin-left: auto;
+	font-family: Helvetica;
+	color: white;
+	margin-top: 5px;
+	/*margin-bottom: auto;*/
+
+}
+
+/* Simple Responsive Framework */
+.row {
+	width: 100%;
+	background-color: #bebebe;
+	margin-bottom: 15px;
+}
+
+/** Large Devices Only **/
+@media (min-width: 992px) {
+	/* using lg for large */
+	 .col-lg-4 {
+		float: left;
+		border: 1px solid black;
+		background-color: #bebebe;
+	}
+	.col-lg-4 {
+		width: 33%;
+	
+}
+}
+
+/* Medium Devices only **/
+@media (min-width: 768px) and (max-width: 991px) {
+	/* using md for medium */
+	.col-md-6,  .col-md-12 {
+		float: left;
+		border: 1px solid black;
+	}
+	.col-md-6 {
+		width: 50%;
+	}
+	.col-md-12 {
+		width: 100%;
+		padding: -5px;
+		/*margin-left: -10px;*/
+	}
+
+}
+
+/* Small Devices only **/
+@media (max-width: 767px) {
+	/* using sm for small */
+	 .col-sm-12 {
+		float: left;
+		border: 1px solid black;
+	}
+	.col-sm-12 {
+		width: 100%;
+	}
+
+}
+
+
+</style>
+
